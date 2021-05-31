@@ -10,7 +10,7 @@
     <hr>
     <form action="/posts" method="POST">
         Title: <input type="text" id='title' name='title'> <br>
-        Author: <input type="text" id='auythor' name='author'> <br>
+        Author: <input type="text" id='author' name='author'> <br>
         Content: <input type="text" id='content' name='content'>
         <input type="submit" value='Post'>
     </form> 
@@ -20,6 +20,7 @@
         <h3>{{ post.date_posted }}</h3>
         <p>{{ post.content }}</p>
         <a href="/posts/delete/{{post.id}}">Delete post</a>
+        <a href="/posts/edit/{{post.id}}">Edit</a>
         <hr>
     {% endfor %}
 {% endblock %}
